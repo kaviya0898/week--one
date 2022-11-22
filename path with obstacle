@@ -1,0 +1,28 @@
+public static void main(String[] args) {
+		int[][]matrix= {{1,1,1},{1,0,1},{1,1,1}};
+		check(0,0,matrix,"");
+		//System.out.println(10000*10000*10000*10000);
+		}
+
+		private static void check(int row,int column, int[][] matrix, String string) {
+			if(row==matrix.length-1 && column==matrix[0].length-1)
+			{
+				System.out.println(string);
+				return;
+			}
+			if(matrix[row][column]==0)
+			{
+				return;
+			}
+			if(row<matrix.length-1)
+			{
+				check(row+1,column,matrix,string+'d');
+			}
+			if(column<matrix[0].length-1)
+			{
+				check(row,column+1,matrix,string+'r');
+			}
+			
+	}
+	
+	}
