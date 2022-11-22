@@ -1,0 +1,15 @@
+public static void main(String[] args) {
+		int count=0;
+		
+	     System.out.print(check(3,3));
+		}
+
+		private static int check(int i,int j) {
+			if(i==1 || j==1)
+			{
+				return 1;
+			}
+			int right=check(i-1,j);
+			int left=check(i,j-1);
+			return right+left;
+	}
